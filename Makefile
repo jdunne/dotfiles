@@ -1,4 +1,4 @@
 install:
-	ln -s -f .vim ~/.vim
-	ln -s -f .vimrc ~/.vimrc
+	ln -s -f $(abspath _vim) ~/.vim
+	ln -s -f $(abspath _vimrc) ~/.vimrc
 
