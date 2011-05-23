@@ -1,8 +1,26 @@
+"Disable compatibility with vi
 set nocompatible
 
+"Load pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+" Enable file type detection
 filetype plugin on
 filetype indent on 
 
+" ---------------------------------------------------------
+" Search Options 
+"  --------------------------------------------------------
+set showmatch
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+" ---------------------------------------------------------
+"  Tabs
+"  --------------------------------------------------------
 set autoindent
 set smartindent
 set tabstop=4
@@ -10,30 +28,68 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-set nowrap
-set number
-set guioptions-=T
-set ruler
+" ---------------------------------------------------------
+" Colors
+"  --------------------------------------------------------
 syntax enable
-
-set showmatch
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
-
-set nobackup    
-
-let NERDTreeIgnore=['\.pyc$']
-
-let g:snips_author = 'John Dunne'
-
+colorscheme solarized
 set t_Co=256 " 256 colors
+
 if has('gui_running')
     set background=light
-    colorscheme solarized
+else
+    set background=dark
 endif
 
-"Load pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+" ---------------------------------------------------------
+" Misc
+"  --------------------------------------------------------
+
+" Turn on line numbers
+set number
+
+"Display ruler at bottom of text editor
+set ruler
+
+"Disable toolbar
+set guioptions-=T
+
+" Always display the status line
+set laststatus=2
+
+" Display the ruler at the bottom of the screen
+set ruler
+
+" Enable mouse
+set selectmode=mouse
+set mouse=a
+
+" Better handling of pasted text.
+set paste
+
+" Backspace key should delete line endings
+set backspace=indent,eol,start
+
+"Disable wrapping of long text files.
+set nowrap
+
+" Disable creation of backup files.
+set nobackup
+
+" ---------------------------------------------------------
+"  NERDTree settings
+"  --------------------------------------------------------
+
+" Map key to toggle NERDTree
+map <Leader>n :NERDTreeToggle<CR>
+
+" Show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
+
+" ---------------------------------------------------------
+" SnipMate settngs 
+"  --------------------------------------------------------
+let g:snips_author = 'John Dunne'
