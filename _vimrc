@@ -33,3 +33,7 @@ if has('gui_running')
     set background=light
     colorscheme solarized
 endif
+
+"Load pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
