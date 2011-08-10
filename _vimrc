@@ -42,8 +42,18 @@ else
 endif
 
 " ---------------------------------------------------------
+" Font
+"  --------------------------------------------------------
+if has('gui_running')
+    set guifont=Inconsolata:h14
+endif
+
+" ---------------------------------------------------------
 " Misc
 "  --------------------------------------------------------
+
+" Set the map leader to a key that is easier to hit.
+let mapleader=","
 
 " Turn on line numbers
 set number
