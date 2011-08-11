@@ -34,19 +34,7 @@ set softtabstop=4
 syntax enable
 colorscheme solarized
 set t_Co=256 " 256 colors
-
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-
-" ---------------------------------------------------------
-" Font
-"  --------------------------------------------------------
-if has('gui_running')
-    set guifont=Inconsolata:h14
-endif
+set background=dark
 
 " ---------------------------------------------------------
 " Misc
