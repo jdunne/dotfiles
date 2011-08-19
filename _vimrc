@@ -49,6 +49,9 @@ set number
 "Display ruler at bottom of text editor
 set ruler
 
+"Display some useful information in the status line
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+
 "Disable toolbar
 set guioptions-=T
 
