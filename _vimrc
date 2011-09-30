@@ -101,3 +101,12 @@ let g:snips_author = 'John Dunne'
 " ---------------------------------------------------------
 map <Leader>a :Ack 
 
+" ---------------------------------------------------------
+" Protocol Buffer highlighting 
+" ---------------------------------------------------------
+augroup filetype
+    au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
+
+
