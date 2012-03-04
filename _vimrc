@@ -95,7 +95,6 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so
 "  --------------------------------------------------------
 let g:snips_author = 'John Dunne'
 
-
 " ---------------------------------------------------------
 " Ack settings
 " ---------------------------------------------------------
@@ -109,4 +108,16 @@ augroup filetype
 augroup end
 
 
+" ---------------------------------------------------------
+" Buffer Management
+" ---------------------------------------------------------
+:nnoremap <C-n> :bnext<CR>              
+:nnoremap <C-p> :bprevious<CR>
+
+
+" ---------------------------------------------------------
+" Markdown
+" ---------------------------------------------------------
+:command MarkdownPreview !markdown.pl % > /tmp/markdown-preview.html && open /tmp/markdown-preview.html 
+map <Leader>mp :MarkdownPreview<CR>
 
