@@ -105,6 +105,7 @@ map <Leader>a :Ack
 " ---------------------------------------------------------
 augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
+    au! BufRead,BufNewFile *.go setfiletype go
 augroup end
 
 
