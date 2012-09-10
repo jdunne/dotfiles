@@ -1,13 +1,13 @@
 "Disable compatibility with vi
 set nocompatible
 
-"Load pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " Enable file type detection
 filetype plugin on
 filetype indent on 
+
+"Load pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " ---------------------------------------------------------
 " Search Options 
