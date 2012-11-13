@@ -32,9 +32,12 @@ set softtabstop=4
 " Colors
 "  --------------------------------------------------------
 syntax enable
-colorscheme solarized
-set t_Co=256 " 256 colors
 set background=dark
+
+if has("unix")
+    colorscheme solarized
+    set t_Co=256 " 256 colors
+endif    
 
 " ---------------------------------------------------------
 " Misc
@@ -121,3 +124,7 @@ augroup end
 :command MarkdownPreview !markdown.pl % > /tmp/markdown-preview.html && open /tmp/markdown-preview.html 
 map <Leader>mp :MarkdownPreview<CR>
 
+" ---------------------------------------------------------
+" vim-powerline 
+" ---------------------------------------------------------
+let g:Powerline_symbols = 'compatible'

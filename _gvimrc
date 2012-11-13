@@ -1,2 +1,5 @@
 set background=light
 set guifont=Inconsolata:h14
+colorscheme solarized
+set t_Co=256 " 256 colors
+
