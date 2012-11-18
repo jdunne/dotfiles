@@ -78,19 +78,6 @@ set nowrap
 set nobackup
 
 " ---------------------------------------------------------
-"  NERDTree settings
-"  --------------------------------------------------------
-
-" Map key to toggle NERDTree
-map <Leader>n :NERDTreeToggle<CR>
-
-" Show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
-
-" Don't display these kinds of files
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
-
-" ---------------------------------------------------------
 " SnipMate settngs 
 "  --------------------------------------------------------
 let g:snips_author = 'John Dunne'
@@ -114,7 +101,6 @@ augroup end
 " ---------------------------------------------------------
 :nnoremap <C-n> :bnext<CR>              
 :nnoremap <C-p> :bprevious<CR>
-
 
 " ---------------------------------------------------------
 " Markdown
