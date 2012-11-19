@@ -1,13 +1,13 @@
 "Disable compatibility with vi
 set nocompatible
 
-"Load pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " Enable file type detection
 filetype plugin on
 filetype indent on 
+
+"Load pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " ---------------------------------------------------------
 " Search Options 
@@ -81,19 +81,6 @@ set nowrap
 set nobackup
 
 " ---------------------------------------------------------
-"  NERDTree settings
-"  --------------------------------------------------------
-
-" Map key to toggle NERDTree
-map <Leader>n :NERDTreeToggle<CR>
-
-" Show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
-
-" Don't display these kinds of files
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$' ]
-
-" ---------------------------------------------------------
 " SnipMate settngs 
 "  --------------------------------------------------------
 let g:snips_author = 'John Dunne'
@@ -108,6 +95,7 @@ map <Leader>a :Ack
 " ---------------------------------------------------------
 augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
+    au! BufRead,BufNewFile *.go setfiletype go
 augroup end
 
 
@@ -116,7 +104,6 @@ augroup end
 " ---------------------------------------------------------
 :nnoremap <C-n> :bnext<CR>              
 :nnoremap <C-p> :bprevious<CR>
-
 
 " ---------------------------------------------------------
 " Markdown
